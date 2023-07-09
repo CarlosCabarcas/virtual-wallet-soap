@@ -34,4 +34,9 @@ class ClientController {
         $user = Client::create($user);
         return $user;
     }
+
+    public function getClientByDocument($document) {
+        $user = Client::where('document', $document)->first();
+        return $user;
+    }
 }

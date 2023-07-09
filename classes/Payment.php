@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class Wallet extends Eloquent
+class Payment extends Eloquent
 {
    /**
    * The attributes that are mass assignable.
@@ -10,7 +10,7 @@ class Wallet extends Eloquent
    * @var array
    */
    protected $fillable = [
-       'balance', 'client_id'
+       'amount', 'session_id', 'token', 'status', 'client_id', 'wallet_id'
    ];
 
     public function client()
@@ -18,8 +18,8 @@ class Wallet extends Eloquent
          return $this->belongsTo('Client');
     }
 
-    public function payments()
+    public function wallet()
     {
-         return $this->hasMany('Payment');
+         return $this->belongsTo('Wallet');
     }
  }

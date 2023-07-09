@@ -17,4 +17,9 @@ class Client extends Eloquent
     {
         return $this->hasOne('Wallet');
     }
+
+    public function payments()
+    {
+        return $this->hasMany('Payment');
+    }
  }
