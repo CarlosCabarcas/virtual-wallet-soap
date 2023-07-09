@@ -24,9 +24,9 @@ class ClientController {
 
             $walletController->createWallet($wallet);
             
-            return ResponseHandler::response(true, 00, '');
+            return ResponseHandler::response(true, 00, '', $newUser);
         } catch (Exception $e) {
-            return ResponseHandler::response(false, $e->getCode(), $e->getMessage());
+            return ResponseHandler::response(false, $e->getCode(), $e->getMessage(), null);
         }
     }
 
