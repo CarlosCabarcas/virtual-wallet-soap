@@ -39,4 +39,20 @@ class WalletController {
 
         return $wallet;
     }
+
+    public function getBalance($document, $phone) {
+        try {
+            $wallet = $this->getWalletByDocumentAndPhone($document, $phone);
+            if (!$wallet) {
+                return ResponseHandler::response(false, 404, 'No wallet was found for the data entered.', null);
+            }
+            $data = [
+                'balance' => $wallet->balance
+            ];
+            return ResponseHandler::response(true, 00, '', $data);
+        } catch (Exception $e) {
+            return ResponseHandler::response(false, $e->getCode(), $e->getMessage(), null);
+        }
+        
+    }
 }

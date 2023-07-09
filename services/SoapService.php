@@ -76,4 +76,20 @@ $server->register(
     'Confirm a Payment and return JSON response'
 );
 
+$server->register(
+    'WalletController.getBalance',
+    [
+        'document' => 'xsd:string',
+        'phone' => 'xsd:string',
+    ],
+    [
+        'return' => 'xsd:string'
+    ],
+    $namespace,
+    $namespace . '#getBalance',
+    'rpc',
+    'encoded',
+    'Get Balance from a Wallet and return JSON response'
+);
+
 $server->service(file_get_contents('php://input'));
