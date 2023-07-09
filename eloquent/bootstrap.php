@@ -1,6 +1,9 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
+use Dotenv\Dotenv;
 use Illuminate\Database\Capsule\Manager as Capsule;
+$dotenv = Dotenv::createImmutable('./');
+$dotenv->load();
 $capsule = new Capsule;
 $capsule->addConnection([
    "driver" => "mysql",

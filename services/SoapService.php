@@ -3,7 +3,7 @@ require_once("eloquent/bootstrap.php");
 require_once("app/Controllers/ClientController.php");
 require_once("app/Controllers/WalletController.php");
 require_once("app/Controllers/PaymentController.php");
-$namespace = 'http://localhost:8080/user-service';
+$namespace = $_ENV['URL_BASE'].'/user-service';
 
 $server = new soap_server();
 $server->configureWSDL('VirtualWallet', $namespace);
