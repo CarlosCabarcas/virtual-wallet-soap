@@ -1,6 +1,5 @@
 <?php
 require_once("classes/Wallet.php");
-require_once("app/Controllers/WalletController.php");
 class WalletController {
     public function createWallet($wallet) {
         $wallet = Wallet::create($wallet);
@@ -26,6 +25,18 @@ class WalletController {
         } catch (Exception $e) {
             return ResponseHandler::response(false, $e->getCode(), $e->getMessage(), null);
         }
-        
+    }
+
+    public function getWalletByClientId($clientId) {
+        $wallet = Wallet::where('client_id', $clientId)->first();
+        return $wallet;
+    }
+
+    public function discountBalance($id, $amount) {
+        $wallet = Wallet::find($id);
+        $wallet->balance = $wallet->balance - $amount;
+        $wallet->save();
+
+        return $wallet;
     }
 }

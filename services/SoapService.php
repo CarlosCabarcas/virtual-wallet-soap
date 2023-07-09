@@ -60,4 +60,20 @@ $server->register(
     'Generate a Payment and return JSON response'
 );
 
+$server->register(
+    'PaymentController.confirmPayment',
+    [
+        'sessionId' => 'xsd:string',
+        'token' => 'xsd:string',
+    ],
+    [
+        'return' => 'xsd:string'
+    ],
+    $namespace,
+    $namespace . '#confirmPayment',
+    'rpc',
+    'encoded',
+    'Confirm a Payment and return JSON response'
+);
+
 $server->service(file_get_contents('php://input'));

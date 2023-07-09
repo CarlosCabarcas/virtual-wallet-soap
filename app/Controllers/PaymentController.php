@@ -3,6 +3,7 @@ session_start();
 require_once("app/Handlers/ResponseHandler.php");
 require_once("app/Controllers/MailController.php");
 require_once("app/Controllers/ClientController.php");
+require_once("app/Controllers/WalletController.php");
 
 class PaymentController {
     public function generatePayment($document, $amount){
@@ -40,5 +41,29 @@ class PaymentController {
     public function createPayment($payment) {
         $payment = Payment::create($payment);
         return $payment;
+    }
+
+    public function confirmPayment($sessionId, $token) {
+        try {
+            $payment = Payment::where('session_id', $sessionId)->where('token', $token)->where('status', 'pending')->first();
+            $walletController = new WalletController();
+
+            if ($payment) {
+                $wallet = $walletController->getWalletByClientId($payment->client_id);
+                if ($wallet->balance < $payment->amount) {
+                    return ResponseHandler::response(false, 406, 'Insufficient funds', null);
+                }
+
+                $payment->status = 'confirmed';
+                $payment->save();
+                $walletController->discountBalance($wallet->id, $payment->amount);
+                return ResponseHandler::response(true, 00, '', $payment);
+            } else {
+                return ResponseHandler::response(false, 404, 'Payment not found', null);
+            }
+        } catch (Exception $e) {
+            return ResponseHandler::response(false, $e->getCode(), $e->getMessage(), null);
+        }
+        
     }
 }
