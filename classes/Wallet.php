@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class Client extends Eloquent
+class Wallet extends Eloquent
 {
    /**
    * The attributes that are mass assignable.
@@ -10,11 +10,11 @@ class Client extends Eloquent
    * @var array
    */
    protected $fillable = [
-       'document', 'names', 'email','phone'
+       'balance', 'client_id'
    ];
 
-    public function wallet()
+    public function client()
     {
-        return $this->hasOne('Wallet');
+         return $this->belongsTo('Client');
     }
  }
