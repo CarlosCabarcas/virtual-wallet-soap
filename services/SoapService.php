@@ -1,25 +1,28 @@
 <?php
-require_once("services/ClientService.php");
+require_once("eloquent/bootstrap.php");
+require_once("app/Controllers/ClientController.php");
 $namespace = 'http://localhost:8080/user-service';
 
 $server = new soap_server();
-$server->configureWSDL('UserWebService', $namespace);
+$server->configureWSDL('VirtualWallet', $namespace);
 $server->wsdl->schemaTargetNamespace = $namespace;
 
 $server->register(
-    'UserService.saveUser',
+    'ClientController.createClient',
     [
-        'name' => 'xsd:string',
-        'email' => 'xsd:string'
+        'document' => 'xsd:string',
+        'names' => 'xsd:string',
+        'email' => 'xsd:string',
+        'phone' => 'xsd:string',
     ],
     [
         'return' => 'xsd:string'
     ],
     $namespace,
-    $namespace . '#saveUser',
+    $namespace . '#createClient',
     'rpc',
     'encoded',
-    'Save a user and return JSON'
+    'Save a Client and return JSON response'
 );
 
 $server->service(file_get_contents('php://input'));

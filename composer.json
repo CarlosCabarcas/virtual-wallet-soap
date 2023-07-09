@@ -1,5 +1,11 @@
 {
     "require": {
-        "econea/nusoap": "^0.9.15"
+        "econea/nusoap": "^0.9.15",
+        "illuminate/database": "^10.14"
+    },
+    "autoload": {
+        "classmap": [
+            "classes"
+        ]
     }
 }

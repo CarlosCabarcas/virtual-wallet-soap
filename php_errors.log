@@ -1,33 +1,15 @@
-[09-Jul-2023 01:42:49 UTC] PHP Warning:  require_once(includes/functions.php): Failed to open stream: No such file or directory in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/index.php on line 3
-[09-Jul-2023 01:42:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'includes/functions.php' (include_path='.:/usr/local/Cellar/php@8.1/8.1.18/share/php@8.1/pear') in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/index.php:3
+[09-Jul-2023 05:13:43 UTC] PHP Warning:  require_once(app/Handlers/RessponseHandler.php): Failed to open stream: No such file or directory in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/app/Controllers/ClientController.php on line 4
+[09-Jul-2023 05:13:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'app/Handlers/RessponseHandler.php' (include_path='.:/usr/local/Cellar/php@8.1/8.1.18/share/php@8.1/pear') in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/app/Controllers/ClientController.php:4
 Stack trace:
-#0 {main}
-  thrown in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/index.php on line 3
-[09-Jul-2023 01:54:16 UTC] PHP Warning:  Undefined array key "output" in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:54:16 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:54:32 UTC] PHP Warning:  Undefined array key "output" in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:54:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:54:34 UTC] PHP Warning:  Undefined array key "output" in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:54:34 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:54:35 UTC] PHP Warning:  Undefined array key "output" in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:54:35 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:54:36 UTC] PHP Warning:  Undefined array key "output" in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:54:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:55:48 UTC] PHP Warning:  Undefined array key "output" in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:55:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:55:49 UTC] PHP Warning:  Undefined array key "output" in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:55:49 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:55:50 UTC] PHP Warning:  Undefined array key "output" in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:55:50 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:55:51 UTC] PHP Warning:  Undefined array key "output" in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:55:51 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:55:51 UTC] PHP Warning:  Undefined array key "output" in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:55:51 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:55:52 UTC] PHP Warning:  Undefined array key "output" in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:55:52 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:55:59 UTC] PHP Warning:  Undefined array key "output" in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:55:59 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:57:17 UTC] PHP Warning:  Undefined array key "output" in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:57:17 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:57:23 UTC] PHP Warning:  Undefined array key "output" in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
-[09-Jul-2023 01:57:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php on line 4466
+#0 /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/services/SoapService.php(3): require_once()
+#1 /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/index.php(2): require_once('/Users/mac/Docu...')
+#2 {main}
+  thrown in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/app/Controllers/ClientController.php on line 4
+[09-Jul-2023 05:14:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function ResponseHandler.response() in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/app/Controllers/ClientController.php:18
+Stack trace:
+#0 /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php(4202): ClientController->createClient('123456789', 'John Doe', 'johndoe@example...', '123456789')
+#1 /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/vendor/econea/nusoap/src/nusoap.php(3825): nusoap_server->invoke_method()
+#2 /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/services/SoapService.php(28): nusoap_server->service('<?xml version="...')
+#3 /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/index.php(2): require_once('/Users/mac/Docu...')
+#4 {main}
+  thrown in /Users/mac/Documents/develop/tecnicaltest/viratual-wallet-soap/app/Controllers/ClientController.php on line 18
